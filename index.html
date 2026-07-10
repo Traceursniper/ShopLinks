@@ -30,8 +30,10 @@
     :root {
       --red: #E8192C;
       --purple: #7B2FBE;
+      --amber: #F2A900;
       --red-glow: rgba(232,25,44,0.4);
       --purple-glow: rgba(123,47,190,0.4);
+      --amber-glow: rgba(242,169,0,0.4);
       --bg: #080808;
       --surface: #111111;
       --text: #F0F0F0;
@@ -216,6 +218,14 @@
     .btn-redbubble::before { background: linear-gradient(90deg, rgba(123,47,190,0.12), transparent); }
     .btn-redbubble:hover { box-shadow: 0 4px 24px var(--purple-glow); }
 
+    .btn-fourthwall {
+      background: var(--surface);
+      border: 1px solid var(--amber);
+      color: #fff;
+    }
+    .btn-fourthwall::before { background: linear-gradient(90deg, rgba(242,169,0,0.12), transparent); }
+    .btn-fourthwall:hover { box-shadow: 0 4px 24px var(--amber-glow); }
+
     .btn-arrow,
     .btn-icon {
       font-size: 1.3rem;
@@ -353,6 +363,14 @@
         <span class="btn-text">
           Redbubble
           <span class="btn-badge">Envíos internacionales</span>
+        </span>
+        <span class="btn-icon" aria-hidden="true">→</span>
+      </a>
+
+      <a href="https://traceursniper-shop.fourthwall.com/" class="btn btn-fourthwall" target="_blank" rel="noopener noreferrer" aria-label="Comprar en Fourthwall — Tienda oficial Rally Legends">
+        <span class="btn-text">
+          Fourthwall
+          <span class="btn-badge">Tienda oficial</span>
         </span>
         <span class="btn-icon" aria-hidden="true">→</span>
       </a>
