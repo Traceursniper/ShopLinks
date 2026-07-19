@@ -317,6 +317,48 @@
     @media (prefers-reduced-motion: reduce) {
       .btn { transition: none; }
     }
+
+    /* GALERIA DE PRODUCTOS — clic en la camiseta va directo al producto */
+    .galeria-productos {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(160px, 1fr));
+      gap: 16px;
+      max-width: 900px;
+      margin: 0 auto;
+      padding: 0 24px 32px;
+    }
+    .producto {
+      text-decoration: none;
+      color: inherit;
+      display: block;
+      text-align: center;
+      background: var(--surface);
+      border: 1px solid #1e1e1e;
+      border-radius: 6px;
+      overflow: hidden;
+      transition: transform 0.15s ease, box-shadow 0.15s ease;
+    }
+    .producto:hover,
+    .producto:focus-visible {
+      transform: translateY(-3px);
+      box-shadow: 0 4px 20px rgba(232,25,44,0.25);
+    }
+    .producto img {
+      width: 100%;
+      aspect-ratio: 1 / 1;
+      object-fit: cover;
+      display: block;
+      background: #000;
+    }
+    .producto .producto-nombre {
+      display: block;
+      padding: 8px 6px;
+      font-family: 'Barlow Condensed', sans-serif;
+      font-weight: 700;
+      font-size: 0.85rem;
+      letter-spacing: 0.02em;
+      color: #eee;
+    }
   </style>
 </head>
 <!-- Google tag (gtag.js) -->
@@ -351,8 +393,40 @@
   <div class="divider"></div>
 
   <main id="main-content">
+
+    <section class="galeria-section" aria-label="Diseños">
+      <h2 class="store-label">Elige tu diseño</h2>
+      <div class="galeria-productos">
+
+        <a href="https://www.redbubble.com/i/t-shirt/French-Rally-Legend-a110-rally-by-Traceursniper/182052485/lrcw?utm_source=web&utm_medium=home&utm_content=alpine-a110" class="producto" target="_blank" rel="noopener noreferrer">
+          <img src="images/alpine-a110.png" alt="Camiseta  A110" loading="lazy">
+          <span class="producto-nombre"> A110</span>
+        </a>
+
+        <a href="https://www.redbubble.com/i/t-shirt/Italian-Rally-Legend-037-legacy-by-Traceursniper/182237269/rh5j?utm_source=web&utm_medium=home&utm_content=lancia-037" class="producto" target="_blank" rel="noopener noreferrer">
+          <img src="images/lancia-037.png" alt="Camiseta 037" loading="lazy">
+          <span class="producto-nombre">037</span>
+        </a>
+
+        <a href="https://www.redbubble.com/i/t-shirt/American-Rally-Legend-Escort-by-Traceursniper/181918634/rh5j?utm_source=web&utm_medium=home&utm_content=escort-mk1-martini" class="producto" target="_blank" rel="noopener noreferrer">
+          <img src="images/escort-mk1-martini.png" alt="Camiseta Escort RS 1800 Mk1" loading="lazy">
+          <span class="producto-nombre">Escort RS 1800 MK1</span>
+        </a>
+
+        <a href="https://www.redbubble.com/i/t-shirt/rally-legend-japanese-car-impreza-by-Traceursniper/181903982/lrcw?utm_source=web&utm_medium=home&utm_content=subaru-impreza" class="producto" target="_blank" rel="noopener noreferrer">
+          <img src="images/subaru-impreza.png" alt="Camiseta Subie Impreza" loading="lazy">
+          <span class="producto-nombre">Subie Impreza</span>
+        </a>
+
+        <!-- Añade aquí un bloque <a class="producto"> por cada diseño nuevo:
+             copia el enlace del producto (URL con /i/... del propio artículo, no de una categoría),
+             pon la imagen en images/nombre-diseño.jpg y el texto del span. -->
+
+      </div>
+    </section>
+
     <nav class="stores" aria-label="Tiendas">
-      <h2 class="store-label">Encuentra tu diseño</h2>
+      <h2 class="store-label">O explora toda la tienda</h2>
 
       <a href="https://www.latostadora.com/shop/Traceursniper/" class="btn btn-tostadora" target="_blank" rel="noopener noreferrer" aria-label="Comprar camisetas en La Tostadora — Envíos a España">
         <span class="btn-text">
